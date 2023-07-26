@@ -3,8 +3,8 @@ import Dice from '../Dice/Dice.js';
 import '../Dicebox/Dicebox.css';
 
 const DiceBox = () => {
-  const [diceWidth, setDiceWidth] = useState(0);
-  const [dice1, setDice1] = useState(1);
+  const [diceWidth, setDiceWidth] = useState(0); // 
+  const [dice1, setDice1] = useState(1); //
 
   const diceRef = useRef(null);
   
@@ -12,8 +12,8 @@ const DiceBox = () => {
   // console.log(`dice 1 : ${dice1}`);
   // console.log(`setDice1 : ${setDice1}`);
   
+  /////////////////////////////////
   useEffect(() => {
-    setTimeout(() => {
       const updateDiceWidth = () => {
         if (diceRef.current) {
           console.log("???????????")
@@ -31,9 +31,9 @@ const DiceBox = () => {
       return () => {
         window.removeEventListener('resize', updateDiceWidth);
       };
-    }, 1000)
     
-  }, []);
+  }, [diceWidth]);
+  ///////////////////////////////
   
   const rolling = () => {
     let ranNum = Math.floor(Math.random() * 6) + 1
@@ -42,9 +42,9 @@ const DiceBox = () => {
   };
   
   return (
-    <section id="diceBox">
+    <section id="diceBox" ref={diceRef}>
       <div className="dice_wrap">
-        <Dice ref={diceRef} face={dice1} diceWidth={diceWidth} />
+        <Dice face={dice1} diceWidth={diceWidth} />
       </div>
       <button id="btnRolling" onClick={rolling}>
         주사위 굴리기

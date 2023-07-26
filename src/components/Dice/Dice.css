@@ -24,30 +24,30 @@
   position: relative;
 }
 
-.dice .face1 {
-  transform: rotateY(0deg) translateZ(60px);
+/* .dice .face1 {
+  transform: rotateY(0deg) translateZ(72.5px);
   background: red;
 }
 .dice .face2 {
-  transform: rotateY(90deg) translateZ(60px);
+  transform: rotateY(90deg) translateZ(72.5px);
   background: blue;
 }
 .dice .face3 {
-  transform: rotateX(90deg) translateZ(60px);
+  transform: rotateX(90deg) translateZ(72.5px);
   background: green;
 }
 .dice .face4 {
-  transform: rotateX(270deg) translateZ(60px);
+  transform: rotateX(270deg) translateZ(72.5px);
   background: pink;
 }
 .dice .face5 {
-  transform: rotateY(270deg) translateZ(60px);
+  transform: rotateY(270deg) translateZ(72.5px);
   background: royalblue;
 }
 .dice .face6 {
-  transform: rotateY(180deg) translateZ(60px);
+  transform: rotateY(180deg) translateZ(72.5px);
   background: purple;
-}
+} */
 /* 주사위 눈 */
 .dice.face1 {
   transform: rotateX(0deg) rotateY(0deg);
